@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drywall Calculator: How Many Sheets of Drywall Do I Need? | TapeList</title>
+<meta name="description" content="Free drywall calculator for a room. Enter the size, doors and windows and get the sheets for walls and ceiling, screws and joint compound, with the math shown.">
+<link rel="canonical" href="https://tapelistapp.github.io/drywall-calculator/">
+<link rel="icon" href="/img/favicon.png">
+<meta property="og:title" content="Drywall calculator: how many sheets do I need?">
+<meta property="og:description" content="Room size in, sheets, screws and joint compound out, in the sizes stores sell.">
+<meta property="og:image" content="https://tapelistapp.github.io/img/7-shopping-list.webp">
+<link rel="stylesheet" href="/assets/site.css">
+<script>window.CALC = 'drywall'; window.PLAY_URL = 'https://play.google.com/store/apps/details?id=io.github.tapelistapp&referrer=utm_source%3Dtapelist_site%26utm_medium%3Dweb%26utm_campaign%3Ddrywall_calculator';</script>
+<script src="/assets/calc.js" defer></script>
+<script src="/assets/ui.js" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How many sheets of drywall do I need for a 12 x 12 room?","acceptedAnswer":{"@type":"Answer","text":"A 12 x 12 ft room with 8 ft walls, one door and one window needs about 13 sheets of 4 x 8 ft drywall for the walls and 5 for the ceiling, with 10% for waste and half of the doors and windows taken off."}},
+{"@type":"Question","name":"What size drywall should I buy for 9 ft walls?","acceptedAnswer":{"@type":"Answer","text":"For 9 ft walls, 54 in x 12 ft sheets hung horizontally cover the height in two rows with no strip. For 8 ft walls use 4 x 8 ft (or 4 x 12 ft) sheets, and for 10 ft walls 4 x 10 ft sheets hung vertically."}},
+{"@type":"Question","name":"How many drywall screws do I need?","acceptedAnswer":{"@type":"Answer","text":"About one screw per square foot of board on walls and 30% more on ceilings, where the spacing is tighter. A pound of 1-1/4 in coarse screws holds roughly 240 to 280 screws, so a typical room takes one 5 lb box."}}
+]}
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/"><img src="/img/icon-192.png" alt="" width="32" height="32">TapeList</a>
+  <nav class="nav"><a href="/paint-calculator/">Paint calculator</a><a href="/drywall-calculator/" aria-current="page">Drywall calculator</a><a class="hide-sm" href="/privacy/">Privacy</a></nav>
+</div></header>
+
+<section class="block"><div class="wrap">
+  <h1 style="font-size:clamp(28px,4.5vw,40px);margin:0 0 8px;line-height:1.15">Drywall calculator: how many sheets do I need?</h1>
+  <p class="sub">Enter the room. You get the sheets for the walls and the ceiling in the size that fits your wall height, the screws and the joint compound.</p>
+
+  <div class="calc">
+    <form class="card" id="form" onsubmit="return false">
+      <div class="seg" role="group" aria-label="Units"><button type="button" id="u-ft" aria-pressed="true">Feet</button><button type="button" id="u-m" aria-pressed="false">Metres</button></div>
+      <div class="row3">
+        <div class="field"><label for="len">Length</label><input id="len" type="text" inputmode="decimal" placeholder="14'" autocomplete="off"></div>
+        <div class="field"><label for="wid">Width</label><input id="wid" type="text" inputmode="decimal" placeholder="12'" autocomplete="off"></div>
+        <div class="field"><label for="hgt">Wall height</label><input id="hgt" type="text" inputmode="decimal" placeholder="8'" autocomplete="off"></div>
+      </div>
+      <p class="field hint unit-hint" style="margin-top:-6px">feet and inches, e.g. 12' 6" or 12.5</p>
+      <div class="row3">
+        <div class="field"><label for="doors">Doors</label><input id="doors" type="number" min="0" max="20" value="1"><span class="hint">32 x 80 in</span></div>
+        <div class="field"><label for="windows">Windows</label><input id="windows" type="number" min="0" max="30" value="1"><span class="hint">36 x 48 in</span></div>
+        <div class="field"><label for="waste">Waste</label><select id="waste"><option value="10" selected>10% (square room)</option><option value="15">15% (L-shape, many corners)</option></select></div>
+      </div>
+      <label class="check"><input type="checkbox" id="ceil" checked> Drywall the ceiling too</label>
+    </form>
+    <div class="card result" id="out" aria-live="polite"></div>
+  </div>
+</div></section>
+
+<section class="block" style="padding-top:8px"><div class="wrap article">
+  <h2>How to work out how much drywall you need</h2>
+  <p>1. Multiply the perimeter of the room by the wall height. A 14 x 12 ft room with 8 ft walls has 416 sq ft of wall.</p>
+  <p>2. Take off half of the doors and windows. You hang full sheets over most openings and cut them out, so the cut-outs rarely come back as pieces you can use.</p>
+  <p>3. Add 10% for waste in a square room, 15% for an L-shape or a room with many corners, and divide by the area of one sheet: 32 sq ft for 4 x 8, 40 for 4 x 10, 54 for 54 in x 12 ft.</p>
+  <p>4. Pick the sheet by wall height so you do not hang a thin strip at the top: 4 x 8 ft for 8 ft walls, 54 in x 12 ft for 9 ft walls, 4 x 10 ft hung vertically for 10 ft walls.</p>
+
+  <h2>Drywall for common room sizes</h2>
+  <p>One door and one window, 10% waste, walls and ceiling.</p>
+  <table>
+    <thead><tr><th>Room</th><th>Wall sheets</th><th>Ceiling sheets (4 x 8)</th><th>Screws</th><th>Joint compound</th></tr></thead>
+    <tbody>
+      <tr><td>10 x 10 ft, 8 ft walls</td><td>11 of 4 x 8</td><td>4</td><td>5 lb box</td><td>1 pail of 17 L</td></tr>
+      <tr><td>12 x 12 ft, 8 ft walls</td><td>13 of 4 x 8</td><td>5</td><td>5 lb box</td><td>2 pails of 17 L</td></tr>
+      <tr><td>14 x 12 ft, 8 ft walls</td><td>14 of 4 x 8</td><td>6</td><td>5 lb box</td><td>2 pails of 17 L</td></tr>
+      <tr><td>16 x 14 ft, 8 ft walls</td><td>16 of 4 x 8</td><td>8</td><td>5 lb box</td><td>2 pails of 17 L</td></tr>
+      <tr><td>14 x 12 ft, 9 ft walls</td><td>10 of 54 in x 12 ft</td><td>6</td><td>5 lb box</td><td>2 pails of 17 L</td></tr>
+      <tr><td>14 x 12 ft, 10 ft walls</td><td>14 of 4 x 10</td><td>6</td><td>5 lb box</td><td>2 pails of 17 L</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Questions</h2>
+  <h3>How many screws per sheet?</h3>
+  <p>About one per square foot of board, so 32 on a 4 x 8 sheet on the wall and more on the ceiling, where the spacing is tighter. Use 1-1/4 in coarse-thread screws for 1/2 in board on wood studs.</p>
+  <h3>How much joint compound do I need?</h3>
+  <p>About 0.45 litres per square metre of board (roughly a 17 L pail for 400 sq ft) for the tape coat, two finish coats and some loss.</p>
+
+  <div class="feature-shot">
+    <img src="/img/7-shopping-list.webp" alt="TapeList app shopping list with drywall, screws and joint compound" width="540" height="960" loading="lazy">
+    <div>
+      <h2 style="margin-top:0">Tape, corner bead, paint and trim too</h2>
+      <p>TapeList is a free Android app that turns the same room into one shopping list: drywall, screws, joint compound, tape, corner bead, primer, paint, baseboard and door trim, in the packages the store sells, and every line explains how it was counted. Draw any room shape and place the doors and windows where they are. No ads, no account, works offline.</p>
+      <p><a class="btn" href="https://play.google.com/store/apps/details?id=io.github.tapelistapp&amp;referrer=utm_source%3Dtapelist_site%26utm_medium%3Dweb%26utm_campaign%3Ddrywall_calculator">Get TapeList on Google Play</a></p>
+    </div>
+  </div>
+  <p class="hint" style="color:var(--muted);font-size:14px;margin-top:28px">The amounts are an estimate. Check them against your job before you buy.</p>
+</div></section>
+
+<footer><div class="wrap"><span>&copy; 2026 TheGreenStudio &middot; <a href="mailto:tapelistmaterialscalculator@gmail.com">tapelistmaterialscalculator@gmail.com</a></span><span><a href="/">TapeList</a> &middot; <a href="/paint-calculator/">Paint calculator</a> &middot; <a href="/privacy/">Privacy</a></span></div></footer>
+</body>
+</html>

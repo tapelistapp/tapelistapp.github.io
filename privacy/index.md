@@ -7,7 +7,7 @@ permalink: /privacy/
 
 Effective date: 2026-10-26 (first published 2026-10-04)
 
-This policy explains what data the Android app **TapeList: Materials Calculator** ("TapeList", "the app") handles.
+This policy explains what data the Android app **TapeList** ("TapeList", "the app"; on Google Play "TapeList: Paint & Drywall Calc", earlier "TapeList: Materials Calculator") handles.
 The app is published on Google Play by the developer **TheGreenStudio** ("we", "us").
 
 ## Contact

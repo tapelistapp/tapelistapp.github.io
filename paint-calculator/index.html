@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paint Calculator: How Much Paint Do I Need for a Room? | TapeList</title>
+<meta name="description" content="Free room paint calculator. Enter the room size, doors and windows and get the gallons, quarts and pails to buy for walls, ceiling and primer, with the math shown.">
+<link rel="canonical" href="https://tapelistapp.github.io/paint-calculator/">
+<link rel="icon" href="/img/favicon.png">
+<meta property="og:title" content="Paint calculator: how much paint do I need?">
+<meta property="og:description" content="Room size in, cans to buy out: gallons, quarts and pails for walls, ceiling and primer.">
+<meta property="og:image" content="https://tapelistapp.github.io/img/7-shopping-list.webp">
+<link rel="stylesheet" href="/assets/site.css">
+<script>window.CALC = 'paint'; window.PLAY_URL = 'https://play.google.com/store/apps/details?id=io.github.tapelistapp&referrer=utm_source%3Dtapelist_site%26utm_medium%3Dweb%26utm_campaign%3Dpaint_calculator';</script>
+<script src="/assets/calc.js" defer></script>
+<script src="/assets/ui.js" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much paint do I need for a 12 x 12 room?","acceptedAnswer":{"@type":"Answer","text":"A 12 x 12 ft room with 8 ft walls, one door and one window has about 354 sq ft of wall. Two coats need about 7.9 litres (2.1 gallons) with 10% for loss, so buy 2 gallons and a quart. The ceiling takes one more gallon."}},
+{"@type":"Question","name":"How many square feet does a gallon of paint cover?","acceptedAnswer":{"@type":"Answer","text":"Most interior paint labels say 350 to 400 sq ft per gallon per coat on a smooth wall. This calculator uses 375 sq ft (9.2 square metres per litre), the average of popular paint labels, and adds 10% for cutting in, loss and touch-ups."}},
+{"@type":"Question","name":"Do I need two coats of paint?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. Paint makers rate coverage and colour for two coats, and a colour change or a patched wall almost always needs two. One coat can be enough when you repaint the same colour over a sound wall."}},
+{"@type":"Question","name":"Should I subtract doors and windows?","acceptedAnswer":{"@type":"Answer","text":"Yes. A standard door is about 18 sq ft and a window about 12 sq ft. Leaving them in buys extra paint you will not use; the 10% margin already covers cutting in around them."}}
+]}
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/"><img src="/img/icon-192.png" alt="" width="32" height="32">TapeList</a>
+  <nav class="nav"><a href="/paint-calculator/" aria-current="page">Paint calculator</a><a href="/drywall-calculator/">Drywall calculator</a><a class="hide-sm" href="/privacy/">Privacy</a></nav>
+</div></header>
+
+<section class="block"><div class="wrap">
+  <h1 style="font-size:clamp(28px,4.5vw,40px);margin:0 0 8px;line-height:1.15">Paint calculator: how much paint do I need?</h1>
+  <p class="sub">Enter the room. You get the cans to buy, gallons, quarts and pails as US and Canadian stores sell them, and how it was counted.</p>
+
+  <div class="calc">
+    <form class="card" id="form" onsubmit="return false">
+      <div class="seg" role="group" aria-label="Units"><button type="button" id="u-ft" aria-pressed="true">Feet</button><button type="button" id="u-m" aria-pressed="false">Metres</button></div>
+      <div class="row3">
+        <div class="field"><label for="len">Length</label><input id="len" type="text" inputmode="decimal" placeholder="14'" autocomplete="off"></div>
+        <div class="field"><label for="wid">Width</label><input id="wid" type="text" inputmode="decimal" placeholder="12'" autocomplete="off"></div>
+        <div class="field"><label for="hgt">Wall height</label><input id="hgt" type="text" inputmode="decimal" placeholder="8'" autocomplete="off"></div>
+      </div>
+      <p class="field hint unit-hint" style="margin-top:-6px">feet and inches, e.g. 12' 6" or 12.5</p>
+      <div class="row3">
+        <div class="field"><label for="doors">Doors</label><input id="doors" type="number" min="0" max="20" value="1"><span class="hint">32 x 80 in</span></div>
+        <div class="field"><label for="windows">Windows</label><input id="windows" type="number" min="0" max="30" value="1"><span class="hint">36 x 48 in</span></div>
+        <div class="field"><label for="coats">Coats</label><select id="coats"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+      </div>
+      <label class="check"><input type="checkbox" id="ceil" checked> Paint the ceiling too</label>
+      <label class="check"><input type="checkbox" id="primer"> Primer (new drywall or a patched wall)</label>
+    </form>
+    <div class="card result" id="out" aria-live="polite"></div>
+  </div>
+</div></section>
+
+<section class="block" style="padding-top:8px"><div class="wrap article">
+  <h2>How to work out how much paint you need</h2>
+  <p>1. Add up the length of all the walls (the perimeter) and multiply by the wall height. A 14 x 12 ft room with 8 ft walls has 52 ft of wall, so 416 sq ft.</p>
+  <p>2. Take off the doors and windows: about 18 sq ft for a 32 x 80 in door and 12 sq ft for a 36 x 48 in window.</p>
+  <p>3. Multiply by the number of coats and divide by the coverage on the can, usually 350 to 400 sq ft per gallon. Add about 10% for cutting in, the roller tray and touch-ups.</p>
+  <p>4. Round up to cans the store sells. A gallon can holds 3.66 to 3.79 litres and a quart about 0.9 litres, so two gallons and a quart can be enough where three gallons would leave a lot over.</p>
+
+  <h2>Paint for common room sizes</h2>
+  <p>Walls 8 ft high unless noted, two coats, 10% extra, the calculator's default door and windows.</p>
+  <table>
+    <thead><tr><th>Room</th><th>Doors / windows</th><th>Wall area</th><th>Wall paint to buy</th><th>Ceiling paint</th></tr></thead>
+    <tbody>
+      <tr><td>10 x 10 ft</td><td>1 / 1</td><td>290 sq ft</td><td>2 gallons</td><td>1 gallon</td></tr>
+      <tr><td>12 x 12 ft</td><td>1 / 1</td><td>354 sq ft</td><td>2 gallons + 1 quart</td><td>1 gallon</td></tr>
+      <tr><td>14 x 12 ft</td><td>1 / 2</td><td>374 sq ft</td><td>3 gallons</td><td>1 gallon + 1 quart</td></tr>
+      <tr><td>16 x 14 ft</td><td>1 / 2</td><td>438 sq ft</td><td>3 gallons</td><td>2 gallons</td></tr>
+      <tr><td>20 x 16 ft</td><td>2 / 3</td><td>504 sq ft</td><td>3 gallons + 1 quart</td><td>2 gallons</td></tr>
+      <tr><td>14 x 12 ft, 9 ft walls</td><td>1 / 2</td><td>426 sq ft</td><td>3 gallons</td><td>1 gallon + 1 quart</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Questions</h2>
+  <h3>How many square feet does a gallon of paint cover?</h3>
+  <p>Most interior paint labels say 350 to 400 sq ft per gallon per coat on a smooth wall. This calculator uses 375 sq ft (9.2 m&sup2; per litre), the average of popular labels. Rough or fresh drywall takes more; prime it first.</p>
+  <h3>Do I need two coats?</h3>
+  <p>Usually yes: paint makers rate their coverage and colour for two coats. One coat can do when you repaint the same colour over a sound wall.</p>
+  <h3>Is the ceiling paint the same?</h3>
+  <p>Use a flat ceiling paint; it is a separate product, so it is a separate line here. The ceiling area is simply length x width.</p>
+
+  <div class="feature-shot">
+    <img src="/img/8-why-this-amount.webp" alt="TapeList app screen explaining why it counted that amount of paint" width="540" height="960" loading="lazy">
+    <div>
+      <h2 style="margin-top:0">The whole job in one list</h2>
+      <p>TapeList is a free Android app that does this for every room of a project: paint, primer, drywall, joint compound, baseboard and door trim, in the packages the store sells. Draw any room shape, place doors, windows and closets where they really are, and turn the room in 3D. No ads, no account, works offline.</p>
+      <p><a class="btn" id="play2" href="https://play.google.com/store/apps/details?id=io.github.tapelistapp&amp;referrer=utm_source%3Dtapelist_site%26utm_medium%3Dweb%26utm_campaign%3Dpaint_calculator">Get TapeList on Google Play</a></p>
+    </div>
+  </div>
+  <p class="hint" style="color:var(--muted);font-size:14px;margin-top:28px">The amounts are an estimate. Check the coverage on your can and your walls before you buy.</p>
+</div></section>
+
+<footer><div class="wrap"><span>&copy; 2026 TheGreenStudio &middot; <a href="mailto:tapelistmaterialscalculator@gmail.com">tapelistmaterialscalculator@gmail.com</a></span><span><a href="/">TapeList</a> &middot; <a href="/drywall-calculator/">Drywall calculator</a> &middot; <a href="/privacy/">Privacy</a></span></div></footer>
+</body>
+</html>
