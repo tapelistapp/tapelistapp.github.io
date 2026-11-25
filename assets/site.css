@@ -132,4 +132,11 @@ footer a { color: var(--muted); }
 .video .play { position: absolute; left: 3%; bottom: 5%; width: 64px; height: 64px; border-radius: 50%; background: rgba(15,35,66,.85); box-shadow: 0 6px 20px rgba(0,0,0,.35); }
 .video .play::after { content: ""; position: absolute; left: 25px; top: 19px; border-style: solid; border-width: 13px 0 13px 20px; border-color: transparent transparent transparent #fff; }
 .video:hover .play, .video:focus-visible .play { background: var(--amber); }
-.video-note { font-size: 13px; color: var(--muted); margin: 0; }
+.video-note { font-size: 13px; color: var(--muted); margin: 12px 0 0; }
+.vgrid-title { font-size: 18px; margin: 24px 0 4px; }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.vgrid figure { margin: 0; }
+.vgrid .video { margin: 8px 0 6px; }
+.vgrid .video .play { width: 44px; height: 44px; }
+.vgrid .video .play::after { left: 17px; top: 13px; border-width: 9px 0 9px 14px; }
+.vgrid figcaption { font-size: 14px; line-height: 1.35; color: var(--ink); }
